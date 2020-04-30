@@ -105,7 +105,7 @@ public class Frontal extends javax.swing.JFrame {
         
         try {
             escrever = new PrintWriter(fich);
-            escrever.print(txtEntrada.getText());
+            escrever.print(txtEntrada.getText().toLowerCase());
             escrever.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Frontal.class.getName()).log(Level.SEVERE, null, ex);
@@ -123,10 +123,8 @@ public class Frontal extends javax.swing.JFrame {
                     return;
                 }
                 switch (tokens) {
-                    case ERROR:
-                        resultado += "Simbolo nao definido\n";
-                        break;
-                    case Identificador: case Numero: case Reservadas:
+                    
+                    case ESTRUTURA_DE_CONTROLO: case ESTRUTURA_DE_REPETICAO:
                         resultado += lexer.lexeme + ":E' um "+ tokens + "\n";
                         break;
                     default:

@@ -10,13 +10,18 @@ package codigo;
  * @author dell
  */
 public enum Tokens {
-    Reservadas,
-    Igual,
-    Suma,
-    Resta,
-    Multiplicacion,
-    Division,
-    Identificador,
+    ESTRUTURA_DE_CONTROLO,
+    ESTRUTURA_DE_REPETICAO,
+    INICIO_DE_PROGRAMA,
+    FIM_DE_PROGRAMA,
+    FIM_DE_INSTRUCAO,
+    CONCATENACAO,
+    INICIAR_CASE,
+    INICIAR_BLOCO_FUNCAO,
+    TERMINAR_BLOCO_FUNCAO,
+    COMECAR_PARAMETRO,
+    TERMINAR_PARAMETRO,
     Numero,
+    ESTRUTURA_DE_CONTROLO_CASO,
     ERROR
 }
